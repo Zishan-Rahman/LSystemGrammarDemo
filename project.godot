@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="LSystemGrammarDemo"
+run/main_scene="res://DemoNode.tscn"
 config/icon="res://icon.png"
 
 [gui]
