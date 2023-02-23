@@ -1,11 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://bu380we4od0ln"]
 
-[ext_resource path="res://DemoNode.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://DemoNode.gd" id="1"]
 
 [node name="DemoNode" type="Node"]
-script = ExtResource( 1 )
-axiom = "FR"
+script = ExtResource("1")
+choices = "deterministic"
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(69, 297)
+
+[node name="TextLabel" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 23.0
+autowrap_mode = 3
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
