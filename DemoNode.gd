@@ -6,14 +6,10 @@ extends Node
 @export_enum("basic", "choices", "deterministic") var choices: String
 @export var axiom: String
 @onready var string: String
+@onready var timer = $Timer
 @onready var line = $Line2D
 @onready var label = $TextLabel
 @onready var rules: Array[Dictionary]
-
-var sample_rule: Dictionary = {
-	"from": "F",
-	"to": "F+F"
-}
 
 func set_values():
 	if choices == "basic":
@@ -50,9 +46,10 @@ func _ready():
 	string = axiom
 	label.size.x = get_viewport().size.x
 	label.text = string
-	$Timer.start()
+	timer.start()
 
 func _on_Timer_timeout():
 	for rule in rules:
 		string = string.replace(rule["from"], rule["to"])
 	label.text = string
+	print(len(string))
