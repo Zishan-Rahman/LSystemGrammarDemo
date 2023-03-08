@@ -48,8 +48,16 @@ func _ready():
 	label.text = string
 	timer.start()
 
-func _on_Timer_timeout():
+func get_new_replacement(character: String) -> String:
 	for rule in rules:
-		string = string.replace(rule["from"], rule["to"])
+		if rule["from"] == character:
+			return rule["to"]
+	return ""
+
+func _on_Timer_timeout():
+	var new_string = ""
+	for character in string:
+		new_string += get_new_replacement(character)
+	string = new_string
 	label.text = string
 	print(len(string))
