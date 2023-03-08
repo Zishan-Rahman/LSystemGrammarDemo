@@ -1,6 +1,6 @@
 2a60927148abd1d33b818b535e306557
-::res://::1677183868
-default_env.tres::Environment::-1::1677155690::0::1::::<><>::
-DemoNode.gd::GDScript::-1::1677177352::0::1::::<>Node<>::
-DemoNode.tscn::PackedScene::3850049602205742207::1677177352::0::1::::<><>::res://DemoNode.gd
-icon.svg::CompressedTexture2D::6344658734115161254::1676999084::1677155713::1::::<><>::
+::res://::1678314597
+default_env.tres::Environment::-1::1678311798::0::1::::<><>::
+DemoNode.gd::GDScript::-1::1678314286::0::1::::<>Node<>::
+DemoNode.tscn::PackedScene::3850049602205742207::1678314307::0::1::::<><>::res://DemoNode.gd
+icon.svg::CompressedTexture2D::6344658734115161254::1678311798::1678311798::1::::<><>::
