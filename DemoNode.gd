@@ -3,7 +3,7 @@ extends Node
 # Basic: https://youtu.be/feNVBEPXAcE?t=77 (L = +)
 # Choices: http://paulbourke.net/fractals/lsys/
 
-@export_enum("basic", "choices", "deterministic") var choices: String
+@export_enum("basic", "choices", "deterministic") var choices: String = "choices"
 @export var axiom: String
 @onready var string: String
 @onready var timer = $Timer

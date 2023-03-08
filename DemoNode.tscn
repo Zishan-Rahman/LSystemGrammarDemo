@@ -4,7 +4,6 @@
 
 [node name="DemoNode" type="Node"]
 script = ExtResource("1")
-choices = "deterministic"
 
 [node name="Timer" type="Timer" parent="."]
 
