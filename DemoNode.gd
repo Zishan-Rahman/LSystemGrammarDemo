@@ -2,6 +2,7 @@ extends Node
 
 # Basic: https://youtu.be/feNVBEPXAcE?t=77 (L = +)
 # Choices: http://paulbourke.net/fractals/lsys/
+# Deterministic: https://www1.biologie.uni-hamburg.de/b-online/e28_3/lsys.html#D0L-system
 
 @export_enum("basic", "choices", "deterministic") var choices: String = "choices"
 @export var axiom: String
