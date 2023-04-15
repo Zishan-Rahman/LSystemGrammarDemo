@@ -46,6 +46,7 @@ func _ready():
 	string = axiom
 	label.size.x = get_viewport().size.x
 	label.text = string
+	print(len(string))
 	timer.start()
 
 func get_new_replacement(character: String) -> String:
