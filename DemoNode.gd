@@ -8,7 +8,6 @@ extends Node
 @export var axiom: String
 @onready var string: String
 @onready var timer = $Timer
-@onready var line = $Line2D
 @onready var label = $TextLabel
 @onready var rules: Array[Dictionary]
 
