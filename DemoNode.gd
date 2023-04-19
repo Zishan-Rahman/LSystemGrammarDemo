@@ -4,6 +4,7 @@ extends Node
 # Choices: http://paulbourke.net/fractals/lsys/
 # Deterministic: https://www1.biologie.uni-hamburg.de/b-online/e28_3/lsys.html#D0L-system
 
+## Allows you to decide which ruleset to use. See the script file for the sources of said rulesets.
 @export_enum("basic", "choices", "deterministic") var choices: String = "choices"
 var axiom: String
 @onready var string: String
