@@ -43,7 +43,7 @@ func set_values() -> void:
 			]
 			axiom = "b"
 
-func _ready():
+func _ready() -> void:
 	set_values()
 	string = axiom
 	label.size.x = get_viewport().size.x
@@ -60,7 +60,7 @@ func get_new_replacement(character: String) -> String:
 			return rule["to"]
 	return ""
 
-func _on_Timer_timeout():
+func _on_Timer_timeout() -> void:
 	# Thanks to Alexander Gillberg (Codat) for inspiration
 	# https://youtu.be/eY9XkJERiG0
 	# Code adapted with his permission
