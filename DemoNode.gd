@@ -51,6 +51,9 @@ func _ready():
 	print(len(string))
 	timer.start()
 
+# Thanks to Alexander Gillberg (Codat) for inspiration
+# https://youtu.be/eY9XkJERiG0
+# Code adapted with his permission
 func get_new_replacement(character: String) -> String:
 	for rule in rules:
 		if rule["from"] == character:
@@ -58,7 +61,10 @@ func get_new_replacement(character: String) -> String:
 	return ""
 
 func _on_Timer_timeout():
-	var new_string = ""
+	# Thanks to Alexander Gillberg (Codat) for inspiration
+	# https://youtu.be/eY9XkJERiG0
+	# Code adapted with his permission
+	var new_string: String = ""
 	for character in string:
 		new_string += get_new_replacement(character)
 	string = new_string
