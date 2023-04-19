@@ -5,7 +5,7 @@ extends Node
 # Deterministic: https://www1.biologie.uni-hamburg.de/b-online/e28_3/lsys.html#D0L-system
 
 @export_enum("basic", "choices", "deterministic") var choices: String = "choices"
-@export var axiom: String
+var axiom: String
 @onready var string: String
 @onready var timer = $Timer
 @onready var label = $TextLabel
