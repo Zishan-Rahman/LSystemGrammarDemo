@@ -12,35 +12,36 @@ var axiom: String
 @onready var label = $TextLabel
 @onready var rules: Array[Dictionary]
 
-func set_values():
-	if choices == "basic":
-		rules = [
-			{
-				"from": "F",
-				"to": "F+F"
-			}
-		]
-		axiom = "F+"
-	elif choices == "choices":
-		rules = [
-			{
-				"from": "F",
-				"to": "F+F−F−FF+F+F−F"
-			}
-		]
-		axiom = "F+F+F+F"
-	elif choices == "deterministic":
-		rules = [
-			{
-				"from": "a",
-				"to": "ab"
-			},
-			{
-				"from": "b",
-				"to": "a"
-			}
-		]
-		axiom = "b"
+func set_values() -> void:
+	match choices:
+		"basic":
+			rules = [
+				{
+					"from": "F",
+					"to": "F+F"
+				}
+			]
+			axiom = "F+"
+		"choices":
+			rules = [
+				{
+					"from": "F",
+					"to": "F+F−F−FF+F+F−F"
+				}
+			]
+			axiom = "F+F+F+F"
+		"deterministic":
+			rules = [
+				{
+					"from": "a",
+					"to": "ab"
+				},
+				{
+					"from": "b",
+					"to": "a"
+				}
+			]
+			axiom = "b"
 
 func _ready():
 	set_values()
